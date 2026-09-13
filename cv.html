@@ -6,7 +6,22 @@
   <title>CV | Alexandre C. Orthey Jr.</title>
   <meta name="description" content="Academic appointments and education of Alexandre C. Orthey Jr., with links to his doctoral thesis and Currículo Lattes.">
   <link rel="icon" type="image/svg+xml" href="assets/cat.svg">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var theme = saved === "light" || saved === "dark"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (error) {
+        document.documentElement.dataset.theme =
+          window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+    }());
+  </script>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/theme.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,15 +29,26 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">Alexandre C. Orthey Jr.</a>
-      <nav aria-label="Main navigation">
-        <ul class="navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="group.html">Group</a></li>
-          <li><a href="cv.html" aria-current="page">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main navigation">
+          <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="group.html">Group</a></li>
+            <li><a href="cv.html" aria-current="page">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="theme-icon-moon" d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/>
+            <g class="theme-icon-sun">
+              <circle cx="12" cy="12" r="3.5"/>
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+            </g>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
   <main class="wrap" id="main">
