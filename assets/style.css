@@ -25,6 +25,7 @@ h3 { font-size: 1.15rem; margin: 0 0 .65rem; }
 .skip-link:focus { top: 1rem; }
 .site-header { border-top: 5px solid var(--ink); border-bottom: 1px solid var(--line); }
 .header-inner { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.header-inner-home { justify-content: flex-end; }
 .brand { color: var(--ink); font-weight: 650; font-size: 1rem; text-decoration: none; white-space: nowrap; }
 .navigation { display: flex; flex-wrap: wrap; gap: .4rem 1.45rem; padding: 0; margin: 0; list-style: none; }
 .navigation a { display: block; padding: .7rem 0; color: var(--muted); font-size: .9375rem; font-weight: 550; text-decoration: none; border-bottom: 2px solid transparent; }
